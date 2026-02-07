@@ -24,6 +24,7 @@ $nav_prefix = $page_base ? $page_base . '#' : '#';
         <ul class="nav__list">
           <li><a href="<?php echo $nav_prefix; ?>chi-siamo">Chi siamo</a></li>
           <li><a href="<?php echo $nav_prefix; ?>servizi">Servizi</a></li>
+          <li><a href="branche.php">Branche</a></li>
           <li><a href="<?php echo $nav_prefix; ?>orari">Orari</a></li>
           <li><a href="<?php echo $nav_prefix; ?>dove-siamo">Dove siamo</a></li>
           <li><a href="<?php echo $nav_prefix; ?>contatti">Contatti</a></li>

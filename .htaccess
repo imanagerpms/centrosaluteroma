@@ -6,9 +6,13 @@ DirectoryIndex index.php index.html
   AddType video/mp4 .mp4
 </IfModule>
 
-# Redirect vecchi link .html alle pagine .php (header/footer condivisi)
+# Redirect vecchi link .html e URL puliti per branche
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteBase /
   RewriteRule ^index\.html$ index.php [R=301,L]
   RewriteRule ^privacy\.html$ privacy.php [R=301,L]
+  # URL puliti: /branche -> branche.php, /branche/fisioterapia -> branca.php?b=fisioterapia
+  RewriteRule ^branche/?$ branche.php [L]
+  RewriteRule ^branche/([a-z0-9-]+)/?$ branca.php?b=$1 [L,QSA]
 </IfModule>

@@ -5,6 +5,7 @@ Thumbs.db
 # IDE / Editor
 .idea/
 .vscode/
+sftp.json
 *.swp
 *.swo
 *~

@@ -54,36 +54,38 @@ Centro Salute Roma: competenza, metodo e attenzione reale alle persone.
     <section class="section" id="servizi" aria-labelledby="servizi-title">
       <div class="container">
         <h2 id="servizi-title" class="section__title">Servizi e prestazioni</h2>
+        <p class="section__intro">Fisioterapia, medicina generale, specialisti e diagnostica: scopri le nostre branche e prenota la tua visita.</p>
         <div class="servizi-grid">
-          <article class="card">
+          <a href="branca.php?b=fisioterapia" class="card card--link">
             <div class="card__icon" aria-hidden="true">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="5" r="2.5"/><path d="M8 8v7M8 15l-2 7M8 15l2 7M8 10l4-1"/><circle cx="16" cy="5" r="2.5"/><path d="M16 8v7M16 15l-2 7M16 15l2 7M16 11l-3-1"/></svg>
             </div>
-            <h3 class="card__title">Fisioterapia/Infermieristica</h3>
-            <p class="card__text">Fisioterapia, laserterapia, teker terapia, magneto terapia. Infermieristica anche a domicilio</p>
-          </article>
-          <article class="card">
+            <h3 class="card__title">Fisioterapia</h3>
+            <p class="card__text">Tecar, laser, magnetoterapia, rieducazione. Infermieristica anche a domicilio.</p>
+          </a>
+          <a href="branche.php#tutte-le-specialita" class="card card--link">
             <div class="card__icon" aria-hidden="true">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
             </div>
-            <h3 class="card__title">Medicina generale</h3>
-            <p class="card__text">Visite di base, follow-up e certificazioni con medici di medicina generale.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5"/></svg>
-            </div>
-            <h3 class="card__title">Specialisti</h3>
-            <p class="card__text">Cardiologia, dermatologia, ginecologia, ortopedia e altre specialità.</p>
-          </article>
-          <article class="card">
+            <h3 class="card__title">Medicina generale e specialisti</h3>
+            <p class="card__text">Visite di base, follow-up e specialità: cardiologia, ginecologia, ortopedia e altre.</p>
+          </a>
+          <a href="branca.php?b=diagnostica" class="card card--link">
             <div class="card__icon" aria-hidden="true">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
             </div>
             <h3 class="card__title">Esami e diagnostica</h3>
-            <p class="card__text">Analisi Biotekna, ecografie, ECG e altri esami strumentali in sede.</p>
-          </article>
+            <p class="card__text">Ecografie, ECG, Holter, elettromiografia, PAP test e altri esami in sede.</p>
+          </a>
+          <a href="branca.php?b=biotekna" class="card card--link">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5"/></svg>
+            </div>
+            <h3 class="card__title">Biotekna</h3>
+            <p class="card__text">Diagnostica avanzata: BIA, PPG, HEG, TomEex, Regmatex, Medmatrix.</p>
+          </a>
         </div>
+        <p class="section__cta"><a href="branche.php" class="btn btn--primary">Scopri tutte le branche e specialità</a></p>
       </div>
     </section>
 
