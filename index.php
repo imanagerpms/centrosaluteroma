@@ -53,8 +53,8 @@ Centro Salute Roma: competenza, metodo e attenzione reale alle persone.
 
     <section class="section" id="servizi" aria-labelledby="servizi-title">
       <div class="container">
-        <h2 id="servizi-title" class="section__title">Servizi e prestazioni</h2>
-        <p class="section__intro">Fisioterapia, medicina generale, specialisti e diagnostica: scopri le nostre branche e prenota la tua visita.</p>
+        <h2 id="servizi-title" class="section__title">I nostri Servizi</h2>
+        <p class="section__intro">Fisioterapia, medicina generale, specialisti, diagnostica e Biotekna: scopri i nostri servizi e prenota la tua visita.</p>
         <div class="servizi-grid">
           <a href="branca.php?b=fisioterapia" class="card card--link">
             <div class="card__icon" aria-hidden="true">
@@ -85,7 +85,7 @@ Centro Salute Roma: competenza, metodo e attenzione reale alle persone.
             <p class="card__text">Diagnostica avanzata: BIA, PPG, HEG, TomEex, Regmatex, Medmatrix.</p>
           </a>
         </div>
-        <p class="section__cta"><a href="branche.php" class="btn btn--primary">Scopri tutte le branche e specialità</a></p>
+        <p class="section__cta"><a href="branche.php" class="btn btn--primary">Scopri tutti i servizi</a></p>
       </div>
     </section>
 
