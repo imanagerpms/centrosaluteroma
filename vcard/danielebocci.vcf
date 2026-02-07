@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Bocci Daniele;;;CEO
+FN:Daniele Bocci
+TEL;TYPE=WORK,VOICE:+39 324 056 6401
+EMAIL:d.bocci@centrosaluteroma.it
+ORG:Centro Salute Roma - Poliambulatorio
+TITLE:CEO
+ADR;TYPE=WORK:;;Via Pietro Rovetti, 179;Roma;;00177;Italia
+URL:https://www.centrosaluteroma.it
+NOTE:Centro Salute Roma è un poliambulatorio che offre cure\, prevenzione e specialisti a Roma. Visite\, esami e prestazioni in un unico luogo. Prenotazioni su MioDottore.
+END:VCARD

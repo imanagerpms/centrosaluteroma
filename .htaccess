@@ -1,0 +1,14 @@
+# Pagina predefinita: apri index.php quando si visita la root (centrosaluteroma.it)
+DirectoryIndex index.php index.html
+
+# MIME type per i video (necessario su alcuni hosting per la riproduzione)
+<IfModule mod_mime.c>
+  AddType video/mp4 .mp4
+</IfModule>
+
+# Redirect vecchi link .html alle pagine .php (header/footer condivisi)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^index\.html$ index.php [R=301,L]
+  RewriteRule ^privacy\.html$ privacy.php [R=301,L]
+</IfModule>
