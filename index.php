@@ -89,7 +89,42 @@ Centro Salute Roma: competenza, metodo e attenzione reale alle persone.
       </div>
     </section>
 
-    <section class="section section--light" id="orari" aria-labelledby="orari-title">
+    <section class="section section--light" id="eventi" aria-labelledby="eventi-title">
+      <div class="container">
+        <h2 id="eventi-title" class="section__title">Eventi</h2>
+        <p class="section__intro">Incontri e attività: resta aggiornato sui prossimi appuntamenti.</p>
+        <div class="eventi-grid">
+          <article class="event-card">
+            <div class="event-card__media">
+              <img
+                src="img/events/ImmagineEdEsistenza.jfif"
+                width="800"
+                height="1131"
+                alt="Locandina: Immagine ed esistenza — 12 aprile, ore 11–13, a cura di Giorgio Crucitti e Andrea Littera. Libreria Eli, Viale Somalia 50/A."
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="event-card__body">
+              <h3 class="event-card__title">Immagine ed esistenza</h3>
+              <p class="event-card__meta">
+                <time datetime="2026-04-12">12 aprile 2026</time>
+                · 11:00–13:00
+                · <span class="event-card__location">Libreria Eli, Viale Somalia 50/A, Roma</span>
+              </p>
+              <p class="event-card__text">A cura di Giorgio Crucitti e Andrea Littera. Tecnica IMAGOTEA, meditazione attiva: scopri quali immagini guidano la tua esistenza e come orientarle a tuo vantaggio.</p>
+              <p class="event-card__details">Ingresso 15 € · prenotazione obbligatoria</p>
+              <p class="event-card__actions">
+                <a href="mailto:eventi@libreriaeli.it" class="btn btn--primary btn--sm">Prenota via email</a>
+                <a href="tel:+390686211712" class="btn btn--outline btn--sm">06 8621 1712</a>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="orari" aria-labelledby="orari-title">
       <div class="container">
         <h2 id="orari-title" class="section__title">Orari e informazioni</h2>
         <div class="orari-grid">

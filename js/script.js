@@ -9,7 +9,8 @@
   var header = document.getElementById('header');
   var nav = document.getElementById('nav-menu');
   var navToggle = document.querySelector('.nav-toggle');
-  var navLinks = document.querySelectorAll('.nav a[href^="#"]');
+  // Tutti i link di ancoraggio (#… o index.php#…), non solo href^="#"
+  var navLinks = document.querySelectorAll('.nav a[href*="#"]');
 
   // Scroll: add/remove class on header for shadow
   function onScroll() {
@@ -36,16 +37,42 @@
     document.body.style.overflow = '';
   }
 
-  // Smooth scroll for anchor links (same page)
+  function isIndexPage() {
+    var file = (window.location.pathname.split('/').pop() || '').toLowerCase();
+    return file === 'index.php' || file === '';
+  }
+
+  // Scroll morbido + URL con hash (es. …/index.php#eventi) così si può copiare il link
   function handleNavClick(e) {
     var href = this.getAttribute('href');
-    if (href === '#') return;
-    var target = document.querySelector(href);
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      closeNav();
+    if (!href || href.indexOf('#') === -1) return;
+
+    var hashPos = href.indexOf('#');
+    var pathBefore = href.slice(0, hashPos);
+    var hash = href.slice(hashPos);
+    if (hash.length < 2) return;
+
+    var onIndex = isIndexPage();
+
+    // index.php#sezione da un’altra pagina: lascia al browser (navigazione piena)
+    if ((pathBefore === 'index.php' || pathBefore.endsWith('/index.php')) && !onIndex) {
+      return;
     }
+
+    // Solo sulla home gestiamo #sezione e index.php#sezione
+    if (pathBefore !== '' && pathBefore !== 'index.php' && !pathBefore.endsWith('/index.php')) {
+      return;
+    }
+
+    var id = decodeURIComponent(hash.slice(1));
+    var target = document.getElementById(id);
+    if (!target) return;
+
+    e.preventDefault();
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    history.replaceState(null, '', window.location.pathname + window.location.search + hash);
+    closeNav();
   }
 
   // Init
@@ -59,6 +86,20 @@
 
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll(); // initial state
+
+  // Apertura diretta tipo /index.php#eventi: riallinea dopo il layout (anche su load).
+  function scrollToHashIfPresent() {
+    var hash = window.location.hash;
+    if (!hash || hash.length < 2) return;
+    var id = decodeURIComponent(hash.slice(1));
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({ block: 'start', behavior: 'auto' });
+  }
+
+  document.addEventListener('DOMContentLoaded', scrollToHashIfPresent);
+  window.addEventListener('load', scrollToHashIfPresent);
 
   // Close nav on resize to desktop (optional)
   window.addEventListener('resize', function () {

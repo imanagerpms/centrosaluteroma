@@ -80,6 +80,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Ancoraggi (#sezione): la sezione resta visibile sotto l’header fisso */
+  scroll-padding-top: var(--header-height);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -410,6 +412,18 @@ a:focus-visible {
   min-height: 36px;
 }
 
+.btn--outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn--outline:hover {
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
 /* Hero
    ========================================================================== */
 
@@ -659,6 +673,89 @@ a:focus-visible {
 .section__cta {
   margin-top: var(--space-xl);
   text-align: center;
+}
+
+/* Eventi
+   ========================================================================== */
+
+.eventi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.event-card {
+  padding: var(--space-xl);
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 768px) {
+  .event-card {
+    display: grid;
+    grid-template-columns: minmax(0, 280px) 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+}
+
+.event-card__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-alt);
+}
+
+.event-card__media img {
+  width: 100%;
+  height: auto;
+}
+
+.event-card__title {
+  margin: 0 0 var(--space-sm);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: var(--line-tight);
+}
+
+.event-card__meta {
+  margin: 0 0 var(--space-md);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-relaxed);
+}
+
+.event-card__text {
+  margin: 0 0 var(--space-md);
+  font-size: var(--text-base);
+  line-height: var(--line-relaxed);
+  color: var(--color-text);
+}
+
+.event-card__details {
+  margin: 0 0 var(--space-md);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.event-card__actions {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.event-card__actions .btn {
+  text-decoration: none;
 }
 
 /* Orari
